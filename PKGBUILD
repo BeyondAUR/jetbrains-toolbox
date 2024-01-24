@@ -2,7 +2,7 @@
 
 pkgname=jetbrains-toolbox
 pkgver=2.1.3.18901
-pkgrel=1
+pkgrel=2
 pkgdesc='Manage all your JetBrains Projects and Tools'
 arch=('x86_64' 'i686')
 url='https://www.jetbrains.com/toolbox/'
@@ -23,8 +23,6 @@ package() {
   install -dm755 "${pkgdir}"/usr/bin/
   install -Dm644 "${srcdir}"/${pkgname}.desktop "${pkgdir}"/usr/share/applications/${pkgname}.desktop
   install -Dm644 "${srcdir}"/icon.svg "${pkgdir}"/usr/share/pixmaps/${pkgname}.svg
-  install -Dm755 "${srcdir}"/${pkgname}-${pkgver}/${pkgname} "${pkgdir}"/opt/${pkgname}/${pkgname}
+  install -Dm755 "${srcdir}"/${pkgname}-${pkgver}/${pkgname} "${pkgdir}"/usr/bin/${pkgname}
   install -Dm644 LICENSE "${pkgdir}"/usr/share/licenses/${pkgname}/LICENSE.txt
-
-  ln -s /opt/${pkgname}/${pkgname} "${pkgdir}"/usr/bin/${pkgname}
 }
