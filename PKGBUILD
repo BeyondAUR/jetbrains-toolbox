@@ -20,9 +20,11 @@ b2sums=('188699152e152c44c1c7aef731add4c74f02518bc15f738adf525f44201af0da01f6e88
         'dadaf0e67b598aa7a7a4bf8644943a7ee8ebf4412abb17cd307f5989e36caf9d0db529a0e717a9df5d9537b10c4b13e814b955ada6f0d445913c812b63804e77')
 
 package() {
-  install -dm755 "${pkgdir}"/usr/bin/
+  install -dm755 "${pkgdir}"/usr/bin/ "${pkgdir}"/opt/"${pkgname}"
   install -Dm644 "${srcdir}"/${pkgname}.desktop "${pkgdir}"/usr/share/applications/${pkgname}.desktop
   install -Dm644 "${srcdir}"/icon.svg "${pkgdir}"/usr/share/pixmaps/${pkgname}.svg
-  install -Dm755 "${srcdir}"/${pkgname}-${pkgver}/${pkgname} "${pkgdir}"/usr/bin/${pkgname}
   install -Dm644 LICENSE "${pkgdir}"/usr/share/licenses/${pkgname}/LICENSE.txt
+
+  cp -ar "${srcdir}"/"${pkgname}-${pkgver}"/bin/* "${pkgdir}/opt/${pkgname}/"
+  ln -s /opt/"${pkgname}"/"${pkgname}" "${pkgdir}"/usr/bin/${pkgname}
 }
