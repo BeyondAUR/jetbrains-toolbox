@@ -1,7 +1,7 @@
 # Maintainer: Frederik Schwan <freswa at archlinux dot org>
 
 pkgname=jetbrains-toolbox
-pkgver=2.8.0.51430
+pkgver=2.8.1.52155
 pkgrel=1
 pkgdesc='Manage all your JetBrains Projects and Tools'
 arch=('x86_64' 'i686')
@@ -10,11 +10,11 @@ license=('custom:jetbrains')
 depends=('glib2' 'libxslt' 'libxss' 'xcb-util-keysyms' 'nss')
 optdepends=('xdg-utils: open URLs')
 options=('!strip')
-source=("https://download.jetbrains.com/toolbox/${pkgname}-${pkgver}.tar.gz"
+source=("https://download-cdn.jetbrains.com/toolbox/${pkgname}-${pkgver}.tar.gz"
         jetbrains-toolbox.desktop
         icon.svg
         LICENSE)
-b2sums=('85b41fa77d4f235952af81820f597048dc11bf37d4524679d11f6203071cdd1ddffd3b09708946157642a447b5cd8840114ca089a19c162146bfbc86f6c3d26f'
+b2sums=('e8ea6ceb1da4fde713e72759d50398f419c074c406f4333b2b138bcc94e5cac31e2cf5335fa912e17740e1fe66e819c5cc4a5a31bf18912c6813ae8b6a4ce816'
         'f62cacc9eeda4e2c96e25bc97b7e353db78ad7785ddbbf8eed1ca63328396c115385b608f597060bc2070c6934e11d24c6fc178966d790546b076c2b27eba577'
         '4b10487746fcb7f328cbdc8b17432f82618c5695baee4ef30e23ff3c4d4b6096daf2fcdfb4c1e2e179e2e61f68bbd88104e5df5a2e6e969aad0a68a75cfff496'
         'dadaf0e67b598aa7a7a4bf8644943a7ee8ebf4412abb17cd307f5989e36caf9d0db529a0e717a9df5d9537b10c4b13e814b955ada6f0d445913c812b63804e77')
