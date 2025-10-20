@@ -1,7 +1,7 @@
 # Maintainer: Frederik Schwan <freswa at archlinux dot org>
 
 pkgname=jetbrains-toolbox
-pkgver=2.9.1.58121
+pkgver=3.0.0.59313
 pkgrel=1
 pkgdesc='Manage all your JetBrains Projects and Tools'
 arch=('x86_64' 'i686')
@@ -9,7 +9,7 @@ url='https://www.jetbrains.com/toolbox/'
 license=('custom:jetbrains')
 depends=('glib2' 'libxslt' 'libxss' 'xcb-util-keysyms' 'nss')
 optdepends=('xdg-utils: open URLs')
-options=('!strip')
+options=('!strip' '!debug')
 source=("https://download-cdn.jetbrains.com/toolbox/${pkgname}-${pkgver}.tar.gz"
         jetbrains-toolbox.desktop
         icon.svg
