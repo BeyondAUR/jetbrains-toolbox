@@ -1,7 +1,7 @@
 # Maintainer: Frederik Schwan <freswa at archlinux dot org>
 
 pkgname=jetbrains-toolbox
-pkgver=3.0.0.59313
+pkgver=3.0.1.59888
 pkgrel=1
 pkgdesc='Manage all your JetBrains Projects and Tools'
 arch=('x86_64' 'i686')
